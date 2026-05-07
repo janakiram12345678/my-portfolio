@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Janaki Ram Portfolio</title>
 
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- GOOGLE FONT -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
 
-  <!-- Font Awesome -->
+  <!-- FONT AWESOME -->
   <link rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
 
   <style>
 
@@ -100,7 +104,6 @@
 
     .hero-text{
       flex:1;
-      animation:fadeLeft 1s ease;
     }
 
     .hero-text h1{
@@ -130,6 +133,7 @@
       border-radius:12px;
       font-weight:600;
       transition:0.3s;
+      text-align:center;
     }
 
     .primary{
@@ -155,7 +159,6 @@
     .hero-image{
       flex:1;
       text-align:center;
-      animation:fadeRight 1s ease;
     }
 
     .hero-image img{
@@ -319,60 +322,81 @@
       margin-top:50px;
     }
 
-    /* ANIMATION */
-
-    @keyframes fadeLeft{
-      from{
-        opacity:0;
-        transform:translateX(-50px);
-      }
-      to{
-        opacity:1;
-        transform:translateX(0);
-      }
-    }
-
-    @keyframes fadeRight{
-      from{
-        opacity:0;
-        transform:translateX(50px);
-      }
-      to{
-        opacity:1;
-        transform:translateX(0);
-      }
-    }
-
-    /* RESPONSIVE */
+    /* MOBILE RESPONSIVE */
 
     @media(max-width:768px){
 
       nav{
         flex-direction:column;
+        padding:15px 5%;
+        gap:15px;
+      }
+
+      nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
         gap:15px;
       }
 
       .hero{
+        flex-direction:column-reverse;
         text-align:center;
+        padding-top:180px;
+        gap:40px;
       }
 
       .hero-text h1{
-        font-size:42px;
+        font-size:38px;
+      }
+
+      .hero-text p{
+        font-size:16px;
       }
 
       .buttons{
         justify-content:center;
       }
 
+      .btn{
+        width:100%;
+        max-width:280px;
+      }
+
       .hero-image img{
-        width:250px;
-        height:250px;
+        width:220px;
+        height:220px;
+      }
+
+      .section-title{
+        font-size:32px;
+      }
+
+      .about{
+        font-size:16px;
+        line-height:1.8;
+      }
+
+      .skills-container,
+      .projects-container{
+        grid-template-columns:1fr;
+      }
+
+      .project-card,
+      .skill-card,
+      .research-card{
+        width:100%;
+      }
+
+      footer{
+        font-size:14px;
       }
 
     }
 
   </style>
+
 </head>
+
 <body>
 
   <!-- NAVBAR -->
@@ -412,8 +436,6 @@
 
       <div class="buttons">
 
-        <!-- RESUME BUTTON -->
-
         <a href="Resume.pdf"
            download
            class="btn primary">
@@ -423,9 +445,7 @@
 
         </a>
 
-        <!-- LINKEDIN -->
-
-        <a href="https://www.linkedin.com/in/janaki-ram-025591361"
+        <a href="https://linkedin.com"
            target="_blank"
            class="btn secondary">
 
@@ -433,8 +453,6 @@
           LinkedIn
 
         </a>
-
-        <!-- GITHUB -->
 
         <a href="https://github.com/janakiram12345678"
            target="_blank"
@@ -449,12 +467,7 @@
 
     </div>
 
-    <!-- YOUR PHOTO -->
-
     <div class="hero-image">
-
-      <!-- ADD YOUR PHOTO HERE -->
-      <!-- photo.jpg or photo.jpeg -->
 
       <img src="photo.jpg" alt="Profile Photo">
 
@@ -522,7 +535,7 @@
 
       <div class="skill-card">
         <i class="fa-solid fa-server"></i>
-        <h3>Hadoop</h3>
+        <h3>AWS EC2</h3>
       </div>
 
       <div class="skill-card">
@@ -575,28 +588,6 @@
 
       </div>
 
-      <div class="project-card">
-
-        <h3>Smart Blind Hat</h3>
-
-        <p>
-          Wearable computer vision system for assisting
-          visually impaired people with audio guidance.
-        </p>
-
-      </div>
-
-      <div class="project-card">
-
-        <h3>Hand Gesture Controlled Robotic Arm</h3>
-
-        <p>
-          Gesture controlled robotic arm using Arduino,
-          flex sensors, and accelerometer.
-        </p>
-
-      </div>
-
     </div>
 
   </section>
@@ -630,9 +621,9 @@
 
     <form class="contact-form">
 
-      <input type="text" placeholder="Your Name" required>
+      <input type="text" placeholder="Your Name">
 
-      <input type="email" placeholder="Your Email" required>
+      <input type="email" placeholder="Your Email">
 
       <textarea rows="6" placeholder="Your Message"></textarea>
 
@@ -654,7 +645,7 @@
 
   </footer>
 
-  <!-- JAVASCRIPT -->
+  <!-- DARK MODE -->
 
   <script>
 
@@ -665,4 +656,5 @@
   </script>
 
 </body>
+
 </html>
