@@ -104,6 +104,7 @@
 
     .hero-text{
       flex:1;
+      animation:fadeLeft 1s ease;
     }
 
     .hero-text h1{
@@ -159,6 +160,7 @@
     .hero-image{
       flex:1;
       text-align:center;
+      animation:fadeRight 1s ease;
     }
 
     .hero-image img{
@@ -322,6 +324,30 @@
       margin-top:50px;
     }
 
+    /* ANIMATIONS */
+
+    @keyframes fadeLeft{
+      from{
+        opacity:0;
+        transform:translateX(-50px);
+      }
+      to{
+        opacity:1;
+        transform:translateX(0);
+      }
+    }
+
+    @keyframes fadeRight{
+      from{
+        opacity:0;
+        transform:translateX(50px);
+      }
+      to{
+        opacity:1;
+        transform:translateX(0);
+      }
+    }
+
     /* MOBILE RESPONSIVE */
 
     @media(max-width:768px){
@@ -381,12 +407,6 @@
         grid-template-columns:1fr;
       }
 
-      .project-card,
-      .skill-card,
-      .research-card{
-        width:100%;
-      }
-
       footer{
         font-size:14px;
       }
@@ -430,8 +450,9 @@
 
       <p>
         AI & Data Science Student passionate about
-        Artificial Intelligence, Computer Vision,
-        Robotics, Deep Learning, and Big Data Technologies.
+        Artificial Intelligence, Machine Learning,
+        Deep Learning, Robotics, Computer Vision,
+        and Big Data Technologies.
       </p>
 
       <div class="buttons">
@@ -467,7 +488,12 @@
 
     </div>
 
+    <!-- YOUR PHOTO -->
+
     <div class="hero-image">
+
+      <!-- Add your image -->
+      <!-- photo.jpg or photo.jpeg -->
 
       <img src="photo.jpg" alt="Profile Photo">
 
@@ -486,9 +512,10 @@
       <p>
         I am currently pursuing B.Tech in Artificial Intelligence
         and Data Science at Amrita Vishwa Vidyapeetham.
-        I am passionate about Machine Learning,
-        Deep Learning, Computer Vision,
-        Robotics, and Big Data Technologies.
+        I enjoy building AI-powered applications,
+        robotics systems, computer vision solutions,
+        and machine learning models that solve
+        real-world problems.
       </p>
 
     </div>
@@ -524,23 +551,23 @@
       </div>
 
       <div class="skill-card">
+        <i class="fa-solid fa-language"></i>
+        <h3>LLMs</h3>
+      </div>
+
+      <div class="skill-card">
         <i class="fa-solid fa-database"></i>
         <h3>SQL</h3>
       </div>
 
       <div class="skill-card">
+        <i class="fa-solid fa-server"></i>
+        <h3>Hadoop & Spark</h3>
+      </div>
+
+      <div class="skill-card">
         <i class="fa-brands fa-github"></i>
         <h3>GitHub</h3>
-      </div>
-
-      <div class="skill-card">
-        <i class="fa-solid fa-server"></i>
-        <h3>AWS EC2</h3>
-      </div>
-
-      <div class="skill-card">
-        <i class="fa-solid fa-microchip"></i>
-        <h3>Robotics</h3>
       </div>
 
     </div>
@@ -557,22 +584,24 @@
 
       <div class="project-card">
 
-        <h3>Color Sorting Robotic Arm</h3>
+        <h3>Translational Models</h3>
 
         <p>
-          Raspberry Pi based robotic arm using CNN and OpenCV
-          for automatic color-based object sorting.
+          Fine-tuned Large Language Models (LLMs)
+          for English–Telugu translation tasks
+          with improved language understanding.
         </p>
 
       </div>
 
       <div class="project-card">
 
-        <h3>Plant Disease Detection using Big Data</h3>
+        <h3>Code Generator Chatbot</h3>
 
         <p>
-          Built scalable plant disease detection system using
-          Hadoop, Apache Spark, and MobileNetV2.
+          Fine-tuned CodeLLaMA on Python CodeX dataset
+          for intelligent code generation and
+          explanation pipeline.
         </p>
 
       </div>
@@ -582,8 +611,81 @@
         <h3>Plant Disease Detection Vehicle</h3>
 
         <p>
-          Developed autonomous rover for real-time crop
-          disease detection with GPS integration.
+          Autonomous vehicle with machine learning-based
+          disease detection, GPS tracking,
+          and treatment suggestion system.
+        </p>
+
+      </div>
+
+      <div class="project-card">
+
+        <h3>Smart Blind Hat</h3>
+
+        <p>
+          Assistive wearable using OCR,
+          PyTesseract, DeepSort object tracking,
+          and voice guidance for visually impaired users.
+        </p>
+
+      </div>
+
+      <div class="project-card">
+
+        <h3>Hand Gesture Controlled Robotic Arm</h3>
+
+        <p>
+          Controlled robotic arm using
+          flex sensors and accelerometer
+          for real-time gesture mapping.
+        </p>
+
+      </div>
+
+      <div class="project-card">
+
+        <h3>Color Sorting Robotic Arm</h3>
+
+        <p>
+          Raspberry Pi + CNN based robotic system
+          for automatic object color detection
+          and intelligent sorting.
+        </p>
+
+      </div>
+
+      <div class="project-card">
+
+        <h3>Catalyst Identification</h3>
+
+        <p>
+          Applied Random Forest, XGBoost,
+          and machine learning models
+          to identify optimal catalysts.
+        </p>
+
+      </div>
+
+      <div class="project-card">
+
+        <h3>Smart Bandwidth Allocation</h3>
+
+        <p>
+          Designed machine learning algorithms
+          for dynamic bandwidth allocation
+          among multiple users.
+        </p>
+
+      </div>
+
+      <div class="project-card">
+
+        <h3>Decision Tree Generator using AVL Trees</h3>
+
+        <p>
+          Developed tree-based decision generator
+          using AVL Trees for structured
+          model analysis and optimization.
         </p>
 
       </div>
@@ -621,9 +723,9 @@
 
     <form class="contact-form">
 
-      <input type="text" placeholder="Your Name">
+      <input type="text" placeholder="Your Name" required>
 
-      <input type="email" placeholder="Your Email">
+      <input type="email" placeholder="Your Email" required>
 
       <textarea rows="6" placeholder="Your Message"></textarea>
 
@@ -656,5 +758,4 @@
   </script>
 
 </body>
-
 </html>
